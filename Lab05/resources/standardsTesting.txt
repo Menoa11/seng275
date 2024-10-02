@@ -1,0 +1,17 @@
+Which standards tool did you use?
+
+Google Lighthouse
+
+Name any test that passed (green), and describe what the test found in your own words (100 words max)
+
+The only test that was green was the Accessibility test which came out to be 100%. This means that when checking
+multiple different kinds of audits such as matching attributes, making sure that image elements have [alt] attributes
+and as simple as making sure that elements have an accessible name came out to be successful.
+
+Name any test that failed (yellow or red) and describe the problem in your own words (100 words max)
+
+The test that failed with a score of 42% was the SEO section. With a score of 42 there were multiple sections that
+failed but in my opinion I would say that the search is blocked by indexing is the most valuable result. This means
+that Search engines can only show pages in their search results if those pages don't explicitly block indexing by search
+engine crawlers. BY fixing this problem, different search engines would be able to scrape the uvic website and improve
+search results for the user no matter the search engine.

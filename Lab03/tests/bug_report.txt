@@ -1,0 +1,31 @@
+Title: Incorrect Validation of License Plate Length
+
+Submitter: Menoa Brennan
+
+email address: menoabrennan@uvic.ca
+
+Summary of bug: The `messageIsValid` method fails to correctly validate the length of license plate
+messages when its not a motorcycle, as it does not properly account for the presence of 7th letter
+or number without any hyphens within the string.
+
+Expected behaviour: The method should correctly enforce the maximum character length which is 6
+characters if the plate does not contain a hyphen.
+
+Actual behaviour: The method incorrectly allows a license plate messages with more than 6 characters
+without a hyphen present, violating the specified length constraint.
+
+Steps to Reproduce:
+1. Copy the test that is listed below into SpecificationTest.java.
+2. This test will fail because it is expecting the string to return false.
+    ```java
+    @Test
+        public void testNotRightTests() {
+            assertFalse(Specification.messageIsValid("ABCDEFG", false));
+        }
+    ```
+3. Run the test and observe the failure, indicating the method incorrectly returns `true` instead
+of `false` for the invalid license plate message "ABCDEFG".
+
+Severity: Medium - This bug allows invalid license plate messages to be considered valid,
+which may lead to incorrect license plate issuance and regulatory non-compliance.
+
